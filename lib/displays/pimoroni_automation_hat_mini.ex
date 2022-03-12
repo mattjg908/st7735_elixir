@@ -27,7 +27,7 @@ defmodule St7735.Displays.PimoroniAutomationHatMini do
           :erlang.float_to_binary(reading, decimals: 3),
           [st7735.text_x, st7735.text_y + offset],
           Evision.cv_FONT_HERSHEY_TRIPLEX(),
-          0.425,
+          0.4,
           st7735.colour
         )
 
@@ -42,9 +42,8 @@ defmodule St7735.Displays.PimoroniAutomationHatMini do
           [st7735.bar_x, st7735.bar_y + (offset - 14)],
           # TODO, better way to decrease offset here...
           [st7735.bar_x + width, st7735.bar_y + st7735.bar_height + (offset - 14)],
-          # TODO, why isn't this filling the rectangle?
           st7735.colour,
-          [Evision.cv_FILLED()]
+          thickness: Evision.cv_FILLED()
         )
 
       {reading, {index + 1, mat_with_bar_and_reading}}

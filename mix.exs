@@ -26,7 +26,6 @@ defmodule St7735Elixir.MixProject do
       {:circuits_gpio, "~> 1.0.0"},
       {:circuits_spi, "~> 1.2"},
       {:cvt_color, github: "cocoa-xu/cvt_color", branch: "master", only: [:dev, :prod]},
-      # {:evision, "~> 0.1.0-dev", github: "cocoa-xu/evision", branch: "main", only: [:dev, :prod]},
       {:evision, "~> 0.1.0-dev", github: "cocoa-xu/evision", branch: "main"},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false, targets: :host}
     ]

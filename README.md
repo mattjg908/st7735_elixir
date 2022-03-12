@@ -1,4 +1,8 @@
 # St7735Elixir
+
+![img1](https://user-images.githubusercontent.com/3199675/158024999-44122221-3479-4640-9afd-949d34172bb2.jpeg)
+
+
 Elixir Implementation for the [Pimoroni Automation Hat
 Mini](https://shop.pimoroni.com/products/automation-hat-mini?variant=31478878077011) display
 
@@ -17,7 +21,8 @@ Pimoroni Automation Hat Mini and used within a Nerves application.
 
 ## Usage
 ### Get a background image (optional)
-/priv in your host app is a good place to put it if you're using Nerves.
+`/priv` in your host app is a good place to put it if you're using Nerves, I
+took the background image from [Pimoroni](https://github.com/pimoroni/automation-hat/blob/master/examples/hat-mini/images/analog-inputs-blank.jpg).
 
 ### Start the display
 If using a background image, be sure to pass the filepath to it in new/1.
@@ -34,13 +39,13 @@ st7735 =
 ### Write rgb565 image data to display (pass a function or data)
 ```
 data = [0.0, 12.0, 24.0] # You'll probably read this data from an ADC (analog to digital)
-rgb565_img_data = St7735.Displays.PimoroniAutomationHatMini.img_data(st7735, data) end
+rgb565_img_data = St7735.Displays.PimoroniAutomationHatMini.img_data(st7735, data)
 St7735.Utils.draw(st7735, rgb565_img_data)
 
 Or, pass a function
 
 data = [0.0, 12.0, 24.0] # You'll probably read this data from an ADC (analog to digital)
-img_data_fun = fn -> displaySt7735.Displays.PimoroniAutomationHatMini.img_data(st7735, data) end
+img_data_fun = fn -> St7735.Displays.PimoroniAutomationHatMini.img_data(st7735, data) end
 St7735.Utils.draw(st7735, img_data_fun)
 ```
 
@@ -52,7 +57,7 @@ by adding `st7735_elixir` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:st7735_elixir, github: "mattjg908/st7735_elixir", tag: "v0.1.0"}
+    {:st7735_elixir, github: "mattjg908/st7735_elixir", tag: "v0.1.1"}
   ]
 end
 ```
