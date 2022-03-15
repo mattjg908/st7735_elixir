@@ -1,6 +1,6 @@
 # St7735Elixir
 
-![img1](https://user-images.githubusercontent.com/3199675/158024999-44122221-3479-4640-9afd-949d34172bb2.jpeg)
+![unnamed](https://user-images.githubusercontent.com/3199675/158282678-ae2291bc-9a69-4f82-a93b-5a1ea1097d64.jpg)
 
 
 Elixir Implementation for the [Pimoroni Automation Hat
