@@ -25,7 +25,8 @@ defmodule St7735.Displays.PimoroniAutomationHatMini do
         Evision.putText(
           acc,
           :erlang.float_to_binary(reading, decimals: 3),
-          [st7735.text_x, st7735.text_y + offset],
+          # TODO, better way to decrease offset here...
+          [st7735.text_x, st7735.text_y + offset - 2],
           Evision.cv_FONT_HERSHEY_TRIPLEX(),
           0.4,
           st7735.colour
